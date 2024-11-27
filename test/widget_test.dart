@@ -6,7 +6,7 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_create_sample/app/my_app.dart';
+import 'package:golden_test_sample/app/my_app.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
