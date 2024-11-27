@@ -101,8 +101,14 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text(
+              '太文字で表示',
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+            ),
             const Text(
-              'You have pushed the button this many times:',
+              'ボタンを押した回数:',
             ),
             Text(
               '$_counter',

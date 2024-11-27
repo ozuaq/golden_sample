@@ -5,12 +5,14 @@ import 'package:flutter_test/flutter_test.dart';
 
 import '../../test_helpers/alchemist/device.dart';
 import '../../test_helpers/alchemist/golden_test_device_scenario.dart';
+import '../../test_helpers/build_widget.dart';
 
 void main() {
   Widget buildWidgetUnderTest() {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'NotoSansJP',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -24,7 +26,9 @@ void main() {
     builder: () => GoldenTestDeviceScenario(
       name: 'my_app_1',
       device: Device.smallPhone,
-      builder: buildWidgetUnderTest,
+      builder: () => createMaterialAppWithHome(
+        homeWidget: const MyHomePage(title: 'my_app golden test'),
+      ),
     ),
     whilePerforming: (WidgetTester tester) async {
       await tester.tap(find.byIcon(Icons.add));
