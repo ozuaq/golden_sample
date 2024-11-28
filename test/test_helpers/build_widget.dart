@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:golden_test_sample/app/config/app_theme.dart';
 
 // MaterialAppのhomeを受け取る関数
 MaterialApp createMaterialAppWithHome({required Widget homeWidget}) {
   return MaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: ThemeData(
-      fontFamily: 'NotoSansJP',
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      useMaterial3: true,
-    ),
+    theme: appThemeData,
     home: homeWidget,
   );
 }
