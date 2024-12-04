@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 import '../../test_helpers/alchemist/device.dart';
 import '../../test_helpers/alchemist/golden_test_device_scenario.dart';
-import '../../test_helpers/build_widget.dart';
+import '../../test_helpers/test_app_builder_widget.dart';
 
 void main() {
   goldenTest(
@@ -14,7 +14,7 @@ void main() {
     builder: () => GoldenTestDeviceScenario(
       name: 'my_app_1',
       device: Device.smallPhone,
-      builder: () => createMaterialAppWithHome(
+      builder: () => TestAppBuilder.createMaterialAppWithHome(
         homeWidget: const MyHomePage(title: 'my_app golden test'),
       ),
     ),
